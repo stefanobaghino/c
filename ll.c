@@ -11,12 +11,20 @@ int main() {
 	max = 0;
 	while ((len = get_line(line, MAXLINE)) > 0) {
 		if (len > max) {
-			max = len;
 			copy(longest, line);
+			if (line[len-1] != '\n') {
+				copy(longest+len-3, "...");
+				int c;
+				while ((c=getchar()) != EOF && c != '\n') {
+					++len;
+				}
+				++len;
+			}
+			max = len;
 		}
 	}
 	if (max > 0) {
-		printf("%s", longest);
+		printf("%d|%s\n", max, longest);
 	}
 	return 0;
 }
