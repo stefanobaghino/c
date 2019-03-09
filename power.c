@@ -10,8 +10,8 @@ int main() {
 }
 
 int power(int m, int n) {
-	int r = 1;
-	for (int i = 0; i < n; i++) {
+	int r;
+	for (r = 1; n > 0; --n) {
 		r = r * m;
 	}
 	return r;
