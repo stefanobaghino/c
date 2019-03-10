@@ -12,3 +12,7 @@ Will compile the `hello.c` file, put the compiler output under the `out` subdire
 
     hello, world
 
+If things are not going your way, you can compile and debug with the `d` script, e.g.:
+
+    ./d hello.c
+
